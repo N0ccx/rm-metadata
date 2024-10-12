@@ -1,8 +1,6 @@
-### File Sorter and Image Metadata Remover
+# File Sorter and Image Metadata Remover
 
-This Python script is designed to sort files by extension and remove metadata from .jpg and .png images. The script will:
-
-Move files into designated folders based on their file extension.
+This Python script is designed to sort files by extension and remove metadata from .jpg and .png images.
     
 Specifically target .jpg and .png files, and remove their metadata after sorting them into an "images" folder.
 
