@@ -26,7 +26,7 @@ To run this script, you need to install the following Python libraries:
 
         bash
 
-        python file_arranger.py
+        python image-rm.py
 
 # Folder Structure
 
