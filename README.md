@@ -7,9 +7,9 @@ This Python script is designed to sort files by extension and remove metadata fr
 
 # Features
 
-    Automatically sorts files by extension.
-    Removes EXIF metadata from .jpg and .png images.
-    Can be customized for other file extensions and processing needs.
+1. Automatically sorts files by extension.
+2. Removes EXIF metadata from .jpg and .png images.
+3. Can be customized for other file extensions and processing needs.
 
 # Prerequisites
 
@@ -21,13 +21,13 @@ pip install Pillow piexif
 
 # How to Use
 
-    Clone the repository or download the script.
-    Place the script in the folder where your files are located.
-    Run the script:
+1. Clone the repository or download the script.
+2. Place the script in the folder where your files are located.
+3. Run the script:
 
-    bash
+        bash
 
-    python file_arranger.py
+        python file_arranger.py
 
     The script will:
         Sort files based on their extension into pre-defined folders (like images, documents, etc.).
@@ -35,15 +35,15 @@ pip install Pillow piexif
 
 # Folder Structure
 
-    The script will create folders such as images, documents, music, etc., based on the file extensions.
-    You can modify the script to adjust folder names or add support for additional file types.
+The script will create folders such as images, documents, music, etc., based on the file extensions.
+You can modify the script to adjust folder names or add support for additional file types.
 
 # Customization
 
 To add more file types or change the folder organization:
 
-    Open file_arranger.py in any text editor.
-    Update the folders dictionary to map new extensions to the folder names of your choice.
+Open file_arranger.py in any text editor.
+Update the folders dictionary to map new extensions to the folder names of your choice.
 
 Example:
 
