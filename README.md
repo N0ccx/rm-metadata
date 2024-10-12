@@ -40,18 +40,6 @@ To add more file types or change the folder organization:
 1. Open file_arranger.py in any text editor.
 2. Update the folders dictionary to map new extensions to the folder names of your choice.
 
-Example:
-
-python
-
-folders = {
-    'txt': 'documents',
-    'jpg': 'images',
-    'png': 'images',
-    'mp3': 'music',
-    # Add more extensions as needed
-}
-
 # License
 
 This project is open-source and available under the MIT License.
