@@ -1,0 +1,52 @@
+import os
+import shutil
+from PIL import Image
+import piexif
+
+def remove_metadata(image_path):
+    try:
+        img = Image.open(image_path)
+        img_data = list(img.getdata())
+        img_no_meta = Image.new(img.mode, img.size)
+        img_no_meta.putdata(img_data)
+
+        # Save the image without any metadata
+        img_no_meta.save(image_path)
+        print(f"Metadata removed from '{image_path}'")
+    except Exception as e:
+        print(f"Error removing metadata from {image_path}: {e}")
+
+def sort_and_process_images():
+    # Get the current working directory
+    directory = os.getcwd()
+
+    # Define the target folder for images
+    image_folder = 'images'
+
+    # Create the image folder if it does not exist
+    folder_path = os.path.join(directory, image_folder)
+    if not os.path.exists(folder_path):
+        os.makedirs(folder_path)
+
+    # Loop through the files in the directory
+    for filename in os.listdir(directory):
+        file_path = os.path.join(directory, filename)
+
+        # Skip directories
+        if os.path.isfile(file_path):
+            # Extract the file extension
+            ext = filename.split('.')[-1].lower()
+
+            # Check if it's a jpg or png file
+            if ext in ['jpg', 'jpeg', 'png']:
+                destination_path = os.path.join(directory, image_folder, filename)
+
+                # Move the file to the images folder
+                shutil.move(file_path, destination_path)
+                print(f"Moved '{filename}' to '{image_folder}'")
+
+                # Remove metadata from the image
+                remove_metadata(destination_path)
+
+if __name__ == "__main__":
+    sort_and_process_images()
